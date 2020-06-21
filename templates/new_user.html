@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/style2.css') }}">
+    <title>Sign Up</title>
+</head>
+<body align="center">
+
+<div class="login-box">
+    <form action="customer-details" method="post">
+        <h1>Member Registration</h1>
+        <input type="hidden" name="type" value="new">
+		<div class="textbox">
+            <label for="name">User Name:</label>
+            <input type="text" name="name" value="" placeholder=" Enter Username" required autocomplete="off">
+		</div>
+        <br>
+		<div class="textbox">
+            <label for="password">Password:</label>
+            <input type="password" name="password" value="" placeholder=" Enter Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                   title="Must contain at least one number, one uppercase letter, one lowercase letter and at least 8 or more characters" required autocomplete="off">
+		</div>
+        <br>
+		<input class="btn" type="submit" value="Register">
+    </form>
+	</div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/style5.css') }}">
+    <title>Customer Registration</title>
+</head>
+<body align="center">
+	<div class="login-box">
+        <form action="transaction" method="post">
+            <input type="hidden" name="type" value="new">
+            <h1>Customer Registration</h1>
+            <div class="textbox">
+                <label for="name">User Name:</label>
+                <input type="text" name="name" value="" placeholder="Enter Username"required autocomplete="off">
+            </div>
+            <br>
+            <div class="textbox">
+                <label for="name">Account Number:</label>
+                <input type="text" name="acc_num" value="" placeholder="Enter Account Number" required autocomplete="off">
+            </div>
+            <br>
+            <div class="textbox">
+                <label for="name">Initial Balance:</label>
+                <input type="number" name="balance" value="" placeholder="Enter Initial Balance" required autocomplete="off">
+            </div>
+            <input class="btn" type="submit" name="" value="Create Account">
+        </form>
+	</div>
+</body>
+</html>

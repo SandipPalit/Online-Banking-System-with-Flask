@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/style7.css') }}">
+    <title>Transaction</title>
+</head>
+<body align="center">
+<h3 align="left" style="color:white;">Username: {{ name }}</h3>
+<h3 align="left" style="color:white;">Account Number: {{ number }}</h3>
+<h3 align="left" style="color:white;">Balance: Rs. {{ balance }}</h3>
+<hr>
+<div class="login-box">
+    <h1>Transactions</h1>
+    <br>
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <ul class=flashes>
+        {% for message in messages %}
+            <p style="color:#1A237E;"><strong><mark>{{ message }}</mark></strong></p>
+        {% endfor %}
+        </ul>
+      {% endif %}
+    {% endwith %}
+    <form action="transactions" method="post">
+        <div class="textbox">
+            <label for="amount">Amount: Rs. </label>
+            <input type="number" name="amount" value="" required placeholder="Enter Amount" autocomplete="off">
+        </div>
+        <br>
+        <label class="radio-inline">
+          <input type="radio" value='withdraw' name="option"><b>Withdraw</b>
+        </label>
+        <label class="radio-inline">
+          <input type="radio" value='deposit' name="option"><b>Deposit</b>
+        </label>
+        <input class="btn" type="submit" value="Proceed" >
+    </form>
+</div>
+</body>
+</html>

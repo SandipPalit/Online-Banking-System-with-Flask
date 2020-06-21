@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/style3.css') }}">
+    <title>Sign In</title>
+</head>
+<body align="center">
+<div class="login-box">
+		<h1>Member Login</h1>
+        <br>
+        {% with messages = get_flashed_messages() %}
+          {% if messages %}
+            <ul class=flashes>
+            {% for message in messages %}
+                <p style="color:red;"><strong><mark>{{ message }}</mark></strong></p>
+            {% endfor %}
+            </ul>
+          {% endif %}
+        {% endwith %}
+        <form action="customer-details" method="post">
+            <input type="hidden" name="type" value="existing">
+            <div class="textbox">
+                <label for="name">User Name:</label>
+                <input type="text" name="name" value="" placeholder="Enter Username" required autocomplete="off">
+            </div>
+            <br>
+            <div class="textbox">
+                <label for="name">Password:</label>
+                <input type="password" name="password" value="" placeholder="Enter Password" required autocomplete="off">
+            </div>
+            <br>
+            <input class="btn" type="submit" name="" value="Sign in">
+        </form>
+	</div>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/style4.css') }}">
+    <title>Employee's Corner</title>
+</head>
+<body align="center">
+<h3 align="left" style="color:white;">Employee Name: {{ name }}</h3>
+	<div class="login-box">
+		<h1>Customer Details</h1>
+        <form action="new-customer">
+            <input class="btn" type="submit" value="New Customer">
+        </form>
+        <br>
+        <form action="existing-customer">
+            <input class="btn" type="submit" value="Existing Customer">
+        </form>
+	</div>
+</body>
+</html>
