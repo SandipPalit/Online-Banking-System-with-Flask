@@ -1,5 +1,7 @@
 # Online Banking System, with python Flask
 
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/E0A_Z9ybDeo/0.jpg)](https://www.youtube.com/watch?v=E0A_Z9ybDeo)
+
 This is a simplified version of an online banking system, entirely with python Flask for the driver code and Html and css for the webpage design.
 This includes features like:
 * New Employee registration
