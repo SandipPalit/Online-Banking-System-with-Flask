@@ -2,8 +2,9 @@
 
 [![Project Demo](https://img.youtube.com/vi/E0A_Z9ybDeo/0.jpg)](https://www.youtube.com/watch?v=E0A_Z9ybDeo)
 
-This is a simplified version of an online banking system, entirely with python Flask for the driver code and Html and css for the webpage design.
-This includes features like:
+In today's fast-paced digital world, developing streamlined and efficient systems is crucial for enhancing user experiences. Recently, I created a simplified online banking system using Python Flask for the backend and HTML/CSS for the frontend design. 
+
+This system offers key functionalities like:
 * New Employee registration
 * Existing Employee Login
 * New Customer registration
